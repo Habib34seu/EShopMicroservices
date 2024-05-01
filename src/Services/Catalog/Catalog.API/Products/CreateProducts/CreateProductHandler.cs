@@ -5,7 +5,7 @@ public record CreateProductCommand(
     List<string>Category,
     string Description,
     string ImageFile,
-    double Price) : ICommand<CreateProductResult>;
+    decimal Price) : ICommand<CreateProductResult>;
 
 public record CreateProductResult(Guid Id);
 internal class CreateProductCommandHandler (IDocumentSession session)
