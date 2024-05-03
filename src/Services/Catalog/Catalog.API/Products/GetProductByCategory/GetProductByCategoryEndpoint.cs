@@ -11,9 +11,11 @@ public class GetProductByCategoryEndpoint : ICarterModule
             var result = await sender.Send(new GetProductByCategoryQuery(category));
             var response = result.Adapt<GetProductByCategoryResponse>();
             return Results.Ok(response);
-        }).WithName("GetProductByCategory")
+        })
+        .WithName("GetProductByCategory")
         .Produces<GetProductByCategoryResponse>(StatusCodes.Status201Created)
         .ProducesProblem(StatusCodes.Status400BadRequest)
+        .ProducesProblem(StatusCodes.Status404NotFound)
         .WithSummary("Get Product By Category")
         .WithDescription("Get Product By Category");
     }
