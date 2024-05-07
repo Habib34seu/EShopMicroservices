@@ -18,6 +18,6 @@ public class GetBasketEndpoint : ICarterModule
         .Produces<GetBasketResponse>(StatusCodes.Status201Created)
         .ProducesProblem(StatusCodes.Status400BadRequest)
         .WithSummary("Get Basket")
-        .WithDescription("Get Basket"); ;
+        .WithDescription("Get Basket"); 
     }
 }
