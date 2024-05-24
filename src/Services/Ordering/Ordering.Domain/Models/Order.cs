@@ -7,7 +7,7 @@ public class Order : Aggregate<OrderId>
 
     public CustomerId CustomerId { get; private set; } = default;
     public OrderName OrderName { get; private set; } = default;
-    public Address ShippingAdress { get; private set; } = default;
+    public Address ShippingAddress { get; private set; } = default;
     public Address BillingAddress { get; private set; } = default;
     public Payment Payment { get; private set; } = default;
     public OrderStatus Status { get; private set; } = OrderStatus.Pending;
@@ -19,14 +19,14 @@ public class Order : Aggregate<OrderId>
     }
 
     public static Order Create(OrderId id, CustomerId customerId, OrderName orderName,
-        Address shippingAdress, Address billingAddress, Payment payment )
+        Address shippingAddress, Address billingAddress, Payment payment )
     {
         var order = new Order
         {
             Id = id,
             CustomerId = customerId,
             OrderName = orderName,
-            ShippingAdress = shippingAdress,
+            ShippingAddress = shippingAddress,
             BillingAddress = billingAddress,
             Payment = payment,
             Status = OrderStatus.Pending,
@@ -38,12 +38,12 @@ public class Order : Aggregate<OrderId>
     }
 
     public void  Update(CustomerId customerId, OrderName orderName,
-        Address shippingAdress, Address billingAddress, Payment payment, OrderStatus status)
+        Address shippingAddress, Address billingAddress, Payment payment, OrderStatus status)
     {
 
         CustomerId = customerId;
         OrderName = orderName;
-        ShippingAdress = shippingAdress;
+        ShippingAddress = shippingAddress;
         BillingAddress = billingAddress;
         Payment = payment;
         Status = status;

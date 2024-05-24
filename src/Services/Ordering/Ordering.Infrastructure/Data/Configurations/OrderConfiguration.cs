@@ -35,7 +35,7 @@ public class OrderConfiguration : IEntityTypeConfiguration<Order>
             });
 
         builder.ComplexProperty(
-            o => o.ShippingAdress, addressBuilder =>
+            o => o.ShippingAddress, addressBuilder =>
             {
                 addressBuilder.Property(a => a.FirstName)
                 .HasMaxLength(50)
