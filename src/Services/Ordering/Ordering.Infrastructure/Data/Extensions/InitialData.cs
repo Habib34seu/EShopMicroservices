@@ -5,8 +5,8 @@ internal class InitialData
     public static IEnumerable<Customer> Customers =>
         new List<Customer>
         {
-            Customer.Create(CustomerId.Of(new Guid("79d017c5-ae7e-4af9-88aa-a760c60d080f")),"habib","34seu.habib@gmail.com"),
-            Customer.Create(CustomerId.Of(new Guid("3d2a348d-a0a9-48e5-9170-3ef64d41717d")),"shafin","opriyoshafin@gmail.com")
+            Customer.Create(CustomerId.Of(new Guid("58c49479-ec65-4de2-86e7-033c546291aa")),"habib","34seu.habib@gmail.com"),
+            Customer.Create(CustomerId.Of(new Guid("189dc8dc-990f-48e0-a37b-e6f2b60b9d7d")),"shafin","opriyoshafin@gmail.com")
         };
 
     public static IEnumerable<Product> Products =>
@@ -22,11 +22,11 @@ internal class InitialData
     {
         get
         {
-            var address1 = Address.Of("mehmet", "ozkaya", "mehmet@gmail.com", "Bahcelievler No:4", "Turkey", "Istanbul", "38050");
-            var address2 = Address.Of("john", "doe", "john@gmail.com", "Broadway No:1", "England", "Nottingham", "08050");
+            var address1 = Address.Of("Md. Habibur", "Rahman", "34seu.habib@gmail.com", "Bahcelievler No:4", "Turkey", "Istanbul", "38050");
+            var address2 = Address.Of("Md.", "Shafin", "opriyoshafin@gmail.com", "Broadway No:1", "England", "Nottingham", "08050");
 
-            var payment1 = Payment.Of("mehmet", "5555555555554444", "12/28", "355", 1);
-            var payment2 = Payment.Of("john", "8885555555554444", "06/30", "222", 2);
+            var payment1 = Payment.Of("habib", "5555555555554444", "12/28", "355", 1);
+            var payment2 = Payment.Of("shafin", "8885555555554444", "06/30", "222", 2);
 
             var order1 = Order.Create(
                             OrderId.Of(Guid.NewGuid()),

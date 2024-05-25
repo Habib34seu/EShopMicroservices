@@ -4,8 +4,8 @@ public interface IAggregate<T> : IAggregate, IEntity<T>
 {
 }
 
-    public interface IAggregate : IEntity
+public interface IAggregate : IEntity
 {
-    IReadOnlyList<IDomainEvent> IDomainEvents {  get; }
+    IReadOnlyList<IDomainEvent> DomainEvents {  get; }
     IDomainEvent[] ClearDomainEvents();
 }
