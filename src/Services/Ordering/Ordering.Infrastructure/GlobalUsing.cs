@@ -4,3 +4,7 @@ global using Ordering.Infrastructure.Data;
 global using Ordering.Domain.Models;
 global using Ordering.Domain.ValueObject;
 global using Ordering.Domain.Abstractions;
+global using Microsoft.EntityFrameworkCore.Diagnostics;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
+global using Ordering.Application.Data;
