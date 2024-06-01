@@ -30,7 +30,7 @@ public class UpdateOrderHandler(IApplicationDbContext dbContext)
     private void UpdateOrderWithNewValues(Order order, OrderDto orderDto)
     {
         var updateShippingAddress = Address.Of(
-            orderDto.ShippingAddress.FriestName,
+            orderDto.ShippingAddress.FirstName,
             orderDto.ShippingAddress.LastName,
             orderDto.ShippingAddress.EmailAddress,
             orderDto.ShippingAddress.AddressLine,
@@ -39,7 +39,7 @@ public class UpdateOrderHandler(IApplicationDbContext dbContext)
             orderDto.ShippingAddress.ZipCode
             );
         var updateBillingAddress = Address.Of(
-            orderDto.BillingAddress.FriestName,
+            orderDto.BillingAddress.FirstName,
             orderDto.BillingAddress.LastName,
             orderDto.BillingAddress.EmailAddress,
             orderDto.BillingAddress.AddressLine,

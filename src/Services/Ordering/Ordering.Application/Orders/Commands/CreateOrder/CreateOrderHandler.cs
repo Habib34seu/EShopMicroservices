@@ -20,7 +20,7 @@ public class CreateOrderHandler(IApplicationDbContext dbContext)
     private Order CreateNewOrder(OrderDto orderDto)
     {
         var shippingAddress= Address.Of(
-            orderDto.ShippingAddress.FriestName,
+            orderDto.ShippingAddress.FirstName,
             orderDto.ShippingAddress.LastName,
             orderDto.ShippingAddress.EmailAddress,
             orderDto.ShippingAddress.AddressLine,
@@ -29,7 +29,7 @@ public class CreateOrderHandler(IApplicationDbContext dbContext)
             orderDto.ShippingAddress.ZipCode
             );
         var billingAddress = Address.Of(
-            orderDto.BillingAddress.FriestName,
+            orderDto.BillingAddress.FirstName,
             orderDto.BillingAddress.LastName,
             orderDto.BillingAddress.EmailAddress,
             orderDto.BillingAddress.AddressLine,
